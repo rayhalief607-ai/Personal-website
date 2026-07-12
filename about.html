@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALYF :: About me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="page-tag">
+      <p class="page-tag__title">ALYF :: About me</p>
+      <p class="page-tag__subtitle">A designer in progress.</p>
+    </div>
+
+    <a href="index.html" class="logo">
+      <img src="assets/icons/logo-alyf.svg" alt="ALYF Logo">
+    </a>
+
+    <button type="button" class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-overlay">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </header>
+
+  <!-- ================= MENU OVERLAY (NAVBAR) ================= -->
+  <nav class="menu-overlay" id="menu-overlay" aria-hidden="true" aria-label="Menu utama">
+
+    <!-- Topbar khusus milik Menu overlay: SELALU bertuliskan "ALYF :: Menu"
+         di halaman manapun overlay ini dibuka, karena overlay ini menutupi
+         topbar asli halaman (position: fixed, full screen) -->
+    <div class="page-tag page-tag--menu">
+      <p class="page-tag__title">ALYF :: Menu</p>
+      <p class="page-tag__subtitle">A designer in progress.</p>
+    </div>
+
+    <div class="menu-overlay__header">
+      <a href="index.html" class="logo">
+        <img src="assets/icons/logo-alyf-white.svg" alt="ALYF Logo">
+      </a>
+      <button type="button" class="close-btn" aria-label="Tutup menu">X</button>
+    </div>
+
+    <ul class="menu-overlay__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="branding.html">Portfolio</a></li>
+      <li><a href="services.html">Services</a></li>
+    </ul>
+
+    <ul class="menu-overlay__categories">
+      <li><a href="poster.html">POSTER DESIGN</a></li>
+      <li><a href="illustration.html">ILLUSTRATION</a></li>
+      <li><a href="branding.html">BRANDING</a></li>
+    </ul>
+
+    <div class="menu-overlay__cta">
+      <span class="menu-cta__diamond"></span>
+      <p>LET'S WORK TOGETHER</p>
+    </div>
+
+    <address class="menu-overlay__contact">
+      <a href="mailto:rayhalief607@gmail.com">rayhalief607@gmail.com</a>
+      <a href="tel:+6281327539761">+62 813 2753 9761</a>
+    </address>
+
+    <ul class="social-icons">
+      <li><a href="mailto:rayhalief607@gmail.com" aria-label="Email"><img src="assets/icons/email-white.svg" alt=""></a></li>
+      <li><a href="https://wa.me/6281327539761" aria-label="WhatsApp"><img src="assets/icons/whatsapp-white.svg" alt=""></a></li>
+      <li><a href="https://instagram.com/rayhalief" aria-label="Instagram"><img src="assets/icons/instagram-white.svg" alt=""></a></li>
+    </ul>
+  </nav>
+
+  <!-- ================= MAIN CONTENT (khusus About) ================= -->
+  <main>
+
+    <!-- <figure>+<figcaption> dipilih karena ini pasangan semantik resmi HTML5
+         untuk gambar yang punya keterangan/caption -->
+    <figure class="about-photo">
+      <img src="assets/image/about-portrait.png" alt="Foto potret Rayhan Alif Maulana">
+      <figcaption>© nama fotografer</figcaption>
+    </figure>
+
+    <!-- <section> untuk paragraf bio: satu kelompok konten dengan tema jelas (perkenalan diri) -->
+    <section class="about-bio">
+      <p>Saya Rayhan Alif Maulana, mahasiswa Desain Komunikasi Visual di Universitas Negeri Semarang yang aktif berkarya di bidang ilustrasi, desain grafis, dan identitas visual. Karya-karya saya lahir dari eksplorasi tugas kuliah hingga proyek personal, mulai dari ilustrasi, logo, hingga layout.</p>
+      <p>Saya percaya bahwa setiap karya yang baik selalu punya cerita di baliknya, dan saya terus belajar untuk menceritakannya lewat visual. Untuk pertanyaan, kolaborasi, atau sekadar ngobrol soal desain, jangan ragu hubungi saya.</p>
+    </section>
+
+    <!-- <address> dipakai lagi karena ini blok identitas + kontak studio -->
+    <address class="about-info">
+      <p class="about-info__name">ALYF</p>
+      <p class="about-info__location">Jl. Raya Banaran Gg. Hasanuddin No.1, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah</p>
+      <p><a href="mailto:rayhalief607@gmail.com">rayhalief607@gmail.com</a></p>
+    </address>
+
+    <!-- <form> wajib dipakai untuk input yang mengumpulkan data dari pengguna,
+         supaya bisa di-submit & di-validasi browser (misal type="email") -->
+    <section class="newsletter">
+      <h2 class="newsletter__title">NEWSLETTER SIGNUP</h2>
+      <form class="newsletter__form" action="#" method="post">
+        <label for="newsletter-email" class="sr-only">Alamat email</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="Masukkan email Anda" required>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <address class="contact">
+      <a href="mailto:rayhalief607@gmail.com">rayhalief607@gmail.com</a>
+      <a href="tel:+6281327539761">+62 813 2753 9761</a>
+
+      <ul class="social-icons">
+        <li><a href="mailto:rayhalief607@gmail.com" aria-label="Email"><img src="assets/icons/email.svg" alt=""></a></li>
+        <li><a href="https://wa.me/6281327539761" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a></li>
+        <li><a href="https://instagram.com/rayhalief" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a></li>
+      </ul>
+    </address>
+
+    <p class="site-footer__tagline">2025 ALYF — MENTIONS LEGALES — CREDITS</p>
+
+    <button type="button" class="scroll-top" aria-label="Kembali ke atas">
+      <img src="assets/icons/chevron-up-down.svg" alt="">
+    </button>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

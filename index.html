@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALYF :: Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <!-- Topbar (label halaman) + logo + hamburger digabung jadi satu <header> 
+       karena semuanya adalah identitas & navigasi utama yang selalu ada 
+       di bagian atas setiap halaman -->
+  <header class="site-header">
+    <div class="page-tag">
+      <p class="page-tag__title">ALYF :: Home</p>
+      <p class="page-tag__subtitle">A designer in progress.</p>
+    </div>
+
+    <a href="index.html" class="logo">
+      <img src="assets/icons/logo-alyf.svg" alt="ALYF Logo">
+    </a>
+
+    <!-- aria-controls menunjuk ke id menu overlay yang akan dibuka -->
+    <button type="button" class="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-overlay">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </header>
+
+  <!-- ================= MENU OVERLAY (NAVBAR) ================= -->
+  <!-- <nav> dipakai karena seluruh isinya adalah navigasi situs.
+       aria-hidden="true" secara default: overlay ini disembunyikan lewat CSS/JS,
+       baru muncul ketika hamburger di-klik -->
+  <nav class="menu-overlay" id="menu-overlay" aria-hidden="true" aria-label="Menu utama">
+
+    <!-- Topbar khusus milik Menu overlay: SELALU bertuliskan "ALYF :: Menu"
+         di halaman manapun overlay ini dibuka, karena overlay ini menutupi
+         topbar asli halaman (position: fixed, full screen) -->
+    <div class="page-tag page-tag--menu">
+      <p class="page-tag__title">ALYF :: Menu</p>
+      <p class="page-tag__subtitle">A designer in progress.</p>
+    </div>
+
+    <div class="menu-overlay__header">
+      <a href="index.html" class="logo">
+        <img src="assets/icons/logo-alyf-white.svg" alt="ALYF Logo">
+      </a>
+      <button type="button" class="close-btn" aria-label="Tutup menu">
+        X
+      </button>
+    </div>
+
+    <!-- Navigasi utama antar halaman -->
+    <ul class="menu-overlay__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="branding.html">Portfolio</a></li>
+      <li><a href="services.html">Services</a></li>
+    </ul>
+
+    <!-- Shortcut ke tiap kategori portfolio -->
+    <ul class="menu-overlay__categories">
+      <li><a href="poster.html">POSTER DESIGN</a></li>
+      <li><a href="illustration.html">ILLUSTRATION</a></li>
+      <li><a href="branding.html">BRANDING</a></li>
+    </ul>
+
+    <div class="menu-overlay__cta">
+      <span class="menu-cta__diamond"></span>
+      <p>LET'S WORK TOGETHER</p>
+    </div>
+
+    <address class="menu-overlay__contact">
+      <a href="mailto:rayhalief607@gmail.com">rayhalief607@gmail.com</a>
+      <a href="tel:+6281327539761">+62 813 2753 9761</a>
+    </address>
+
+    <ul class="social-icons">
+      <li><a href="mailto:rayhalief607@gmail.com" aria-label="Email"><img src="assets/icons/email-white.svg" alt=""></a></li>
+      <li><a href="https://wa.me/6281327539761" aria-label="WhatsApp"><img src="assets/icons/whatsapp-white.svg" alt=""></a></li>
+      <li><a href="https://instagram.com/rayhalief" aria-label="Instagram"><img src="assets/icons/instagram-white.svg" alt=""></a></li>
+    </ul>
+  </nav>
+
+  <!-- ================= MAIN CONTENT (khusus Home) ================= -->
+  <main>
+
+    <!-- <section> membungkus seluruh grid, karena ini satu kelompok konten
+         dengan tema jelas: preview singkat portfolio -->
+    <section class="portfolio-grid" aria-label="Preview portfolio">
+
+      <!-- Tiap item = <article> karena berdiri sendiri: 1 gambar + 1 label
+           kategori yang tetap bermakna walau dipisah dari halaman.
+           Urutan bentuk & kategori mengikuti persis data Figma:
+           Poster(bulat) - Ilustrasi(kotak) - Poster(bulat) - Ilustrasi(kotak) - Poster(bulat) - Branding(kotak) -->
+      <article class="portfolio-item portfolio-item--circle portfolio-item--circle-1">
+        <a href="poster.html">
+          <img src="assets/image/preview-poster-1.png" alt="Preview karya kategori Poster">
+          <span class="portfolio-item__label">Poster</span>
+        </a>
+      </article>
+
+      <article class="portfolio-item portfolio-item--square portfolio-item--square-1">
+        <a href="illustration.html">
+          <img src="assets/image/preview-ilustrasi-1.png" alt="Preview karya kategori Ilustrasi">
+          <span class="portfolio-item__label">Ilustrasi</span>
+        </a>
+      </article>
+
+      <article class="portfolio-item portfolio-item--circle portfolio-item--circle-2">
+        <a href="poster.html">
+          <img src="assets/image/preview-poster-2.png" alt="Preview karya kategori Poster">
+          <span class="portfolio-item__label">Poster</span>
+        </a>
+      </article>
+
+      <article class="portfolio-item portfolio-item--square portfolio-item--square-2">
+        <a href="illustration.html">
+          <img src="assets/image/preview-ilustrasi-2.png" alt="Preview karya kategori Ilustrasi">
+          <span class="portfolio-item__label">Ilustrasi</span>
+        </a>
+      </article>
+
+      <article class="portfolio-item portfolio-item--circle portfolio-item--circle-1">
+        <a href="poster.html">
+          <img src="assets/image/preview-poster-3.png" alt="Preview karya kategori Poster">
+          <span class="portfolio-item__label">Poster</span>
+        </a>
+      </article>
+
+      <article class="portfolio-item portfolio-item--square portfolio-item--square-3">
+        <a href="branding.html">
+          <img src="assets/image/preview-branding-1.png" alt="Preview karya kategori Branding">
+          <span class="portfolio-item__label">Branding</span>
+        </a>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <address class="contact">
+      <a href="mailto:rayhalief607@gmail.com">rayhalief607@gmail.com</a>
+      <a href="tel:+6281327539761">+62 813 2753 9761</a>
+
+      <ul class="social-icons">
+        <li><a href="mailto:rayhalief607@gmail.com" aria-label="Email"><img src="assets/icons/email.svg" alt=""></a></li>
+        <li><a href="https://wa.me/6281327539761" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt=""></a></li>
+        <li><a href="https://instagram.com/rayhalief" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a></li>
+      </ul>
+    </address>
+
+    <p class="site-footer__tagline">2025 ALYF — MENTIONS LEGALES — CREDITS</p>
+
+    <button type="button" class="scroll-top" aria-label="Kembali ke atas">
+      <img src="assets/icons/chevron-up-down.svg" alt="">
+    </button>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
